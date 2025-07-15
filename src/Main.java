@@ -4,9 +4,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Madlib madlib = new Madlib();
+        int x = 10;
+        int y = 13;
+        int z;
 
-        madlib.runMadlib();
+        //z = x + y;
+        //z = x - y;
+        //z = x * y;
+        //z = x / y;
+        z = x % y;
+
+        System.out.println(z);
 
     }
 }
