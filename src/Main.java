@@ -6,13 +6,18 @@ public class Main {
 //        System.out.println(Math.E);
 
         double result;
-        int power = 1;
 
-        while(power < 25){
-            result = Math.pow(2, power);
-            System.out.println(result);
-            power++;
-        }
+//        result = Math.pow(2, 5);
+//        result = Math.abs(-5);
+//        result = Math.sqrt(9);
+//        result = Math.round (3.4558);
+//        result = Math.ceil(3.22);
+//        result = Math.floor(3.22);
+//        result = Math.max(10, 20);
+//        result = Math.min(10, 20);
 
+        result = Math.sqrt
+
+        System.out.println(result);
     }
 }
