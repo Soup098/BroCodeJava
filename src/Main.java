@@ -1,27 +1,22 @@
-import java.util.Random;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        boolean isStudent = false;
-        boolean isSenior = false;
-        double price = 10;
+        String name = "Alex Surprenant";
 
-        if(isStudent){
-            if(isSenior){
-                System.out.println("You get a senior discount of 20%, and a student discount of 10%");
-                price *= 0.7;
-            }else{
-                System.out.println("You get a student discount of 10%");
-                price *= 0.9;
-            }
-        }else{
-            if(isSenior){
-                System.out.println("Your get a senior discount of 20%");
-                price *= 0.8;
-            }
-        }
+//        int length = name.length();
+//        char letter = name.charAt(2);
+//        int index = name.indexOf('k');
+//        int lastIndex = name.lastIndexOf('n');
 
-        System.out.printf("The price of the ticket is $%.2f", price);
+        //name = name.toUpperCase();
+        //name = name.toLowerCase();
+        //name = name.trim();
+        //name = name.replace("r", "k");
+
+
+        //System.out.println(name.isEmpty());
+        //System.out.println(name.contains(" "));
+        System.out.println(name.equals("Password"));
     }
 }
