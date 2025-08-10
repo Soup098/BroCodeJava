@@ -1,22 +1,27 @@
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        String name = "Alex Surprenant";
+        Scanner scanner = new Scanner(System.in);
+        // .substring() = a method used to extract a portion of a string
+        String email;
+        String userName;
+        String domain;
 
-//        int length = name.length();
-//        char letter = name.charAt(2);
-//        int index = name.indexOf('k');
-//        int lastIndex = name.lastIndexOf('n');
+        System.out.println("Please enter email");
+        email = scanner.nextLine();
 
-        //name = name.toUpperCase();
-        //name = name.toLowerCase();
-        //name = name.trim();
-        //name = name.replace("r", "k");
+        if(email.contains("@")){
+            userName = email.substring(0, email.indexOf('@'));
+            domain = email.substring(email.indexOf('@')+1);
 
-
-        //System.out.println(name.isEmpty());
-        //System.out.println(name.contains(" "));
-        System.out.println(name.equals("Password"));
+            System.out.println("Your username is " + userName);
+            System.out.println("The email domain is " + domain);
+        }else{
+            System.out.println("Invalid email");
+        }
+        scanner.close();
     }
 }
