@@ -7,26 +7,19 @@ public class Main
     {
         Scanner scanner = new Scanner(System.in);
 
-        double balance;
-        double yearEndBalance = 0;
-        int years;
-        int monthlyInvestment;
-        double growthPercent = .08;
+        double temp;
+        double newTemp;
+        String unit;
 
+        System.out.print("Enter temperature: ");
+        temp = scanner.nextDouble();
+        System.out.print("Convert to Celsius or Fahrenheit (C or F): ");
+        unit = scanner.next().toUpperCase();
 
-        System.out.print("Enter initial balance: ");
-        balance = scanner.nextInt();
-        System.out.print("Enter number of years: ");
-        years = scanner.nextInt();
-        System.out.print("Enter monthly investment: ");
-        monthlyInvestment = scanner.nextInt();
+        newTemp = (unit.equals("C")) ? (temp - 32) * 5/9 : (temp * 5/9) + 32;
 
-        for(int i = 0; i < years; i++)
-        {
-            yearEndBalance = (balance + (monthlyInvestment * 12)) * (growthPercent + 1);
-            System.out.print("End of year " + (i + 1) + ": ");
-            System.out.printf("$%.2f\n" , yearEndBalance);
-            balance = yearEndBalance;
-        }
+        System.out.println((unit.equals("C") ? (newTemp + " F") : (newTemp + " C")));
+
+        scanner.close();
     }
 }
