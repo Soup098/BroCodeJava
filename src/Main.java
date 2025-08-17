@@ -5,21 +5,15 @@ public class Main
 {
     public static void main(String[] args)
     {
+        //enhanced switch
         Scanner scanner = new Scanner(System.in);
+        System.out.print("type a day of the week: ");
+        String day = scanner.next();
 
-        double temp;
-        double newTemp;
-        String unit;
-
-        System.out.print("Enter temperature: ");
-        temp = scanner.nextDouble();
-        System.out.print("Convert to Celsius or Fahrenheit (C or F): ");
-        unit = scanner.next().toUpperCase();
-
-        newTemp = (unit.equals("C")) ? (temp - 32) * 5/9 : (temp * 5/9) + 32;
-
-        System.out.println((unit.equals("C") ? (newTemp + " F") : (newTemp + " C")));
-
-        scanner.close();
+        switch(day.toLowerCase()){
+            case "monday", "tuesday", "wednesday", "thursday", "friday" -> System.out.println("It is a weekday");
+            case "saturday", "sunday" -> System.out.println("Weekend");
+            default -> System.out.println("Not a day");
+        }
     }
 }
