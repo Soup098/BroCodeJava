@@ -4,14 +4,19 @@ import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args){
-        double temp = 100;
-        boolean isSunny = true;
+        //while loops - repeat code forever while a certain condition remains true
 
+        Scanner scanner = new Scanner(System.in);
 
-        if(temp <= 90 && temp >= 70){
-            System.out.println("The weather is good");
-        }else if(temp > 90 && temp < 110 && !isSunny){
-            System.out.println("the weather is hot and shitty");
+        String name = "";
+
+        while(name.isEmpty()){
+            System.out.print("Enter name: ");
+            name = scanner.nextLine();
         }
+
+        System.out.println("Hello " + name);
+
+        scanner.close();
     }
 }
