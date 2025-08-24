@@ -4,15 +4,25 @@ import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args) throws InterruptedException {
-        //for loops
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Countdown start? ");
-        int start = scanner.nextInt();
+        int rows;
+        int columns;
+        char symbol;
+        System.out.print("How many rows?:  ");
+        rows = scanner.nextInt();
+        System.out.print("How many columns?: ");
+        columns = scanner.nextInt();
+        System.out.print("what symbol?: ");
+        symbol = scanner.next().charAt(0);
 
-        for(int i  = start; i > 0; i--){
-            System.out.println(i);
-            Thread.sleep(1000);
+        for (int i = columns; i < columns + 1; i++){
+            for (int j = rows; j < rows  + 1; j++){
+                System.out.println(symbol);
+            }
+            System.out.println();
         }
+
+
     }
 }
