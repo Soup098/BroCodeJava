@@ -11,11 +11,19 @@ public class Main
     static double square(double num){
         return num * num;
     }
-
+    static double cube(double num){
+        return num * num * num;
+    }
+    static String getFullName(String firstName, String lastName){
+        return firstName + " " + lastName;
+    }
 
     public static void main(String[] args) {
-        double number = 14;
-        System.out.println(square(number));
+
+        String first = "Alex";
+        String last = "Surprenant";
+
+        System.out.println(getFullName(first, last));
     }
 }
 
