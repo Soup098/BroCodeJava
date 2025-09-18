@@ -10,14 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        int x = 1;//LOCAL
-
-        System.out.println(x);
-
-
-
-
+        BankingProgram.runBankingProgram();
     }
 }
 
