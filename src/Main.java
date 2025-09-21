@@ -13,14 +13,26 @@ public class Main {
     public static void main(String[] args) {
         //arrays a collection of values of the same data type
 
-        String[] fruit = {"orange", "apple", "banana", "mango"};
+        Scanner scanner = new Scanner(System.in);
+        String[] foods;
+        int size;
 
-        Arrays.sort(fruit);
-        Arrays.fill(fruit, "Avacado");
+        System.out.print("How many foods do you want?: ");
+        size = scanner.nextInt();
+        scanner.nextLine();
 
-        for(String fruits : fruit){
-            System.out.print(fruits + " ");
+        foods = new String[size];
+
+        for(int i = 0; i < foods.length; i++){
+            System.out.print("Enter a food: ");
+            foods[i] = scanner.nextLine();
         }
+
+        for(String food : foods){
+            System.out.print(food + " ");
+        }
+
+        scanner.close();
     }
 }
 
