@@ -11,28 +11,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //arrays a collection of values of the same data type
+        //searching arrays
 
-        Scanner scanner = new Scanner(System.in);
-        String[] foods;
-        int size;
+        int[] numbers = {1, 9, 2, 8, 3, 5, 4};
+        int target = 2;
 
-        System.out.print("How many foods do you want?: ");
-        size = scanner.nextInt();
-        scanner.nextLine();
-
-        foods = new String[size];
-
-        for(int i = 0; i < foods.length; i++){
-            System.out.print("Enter a food: ");
-            foods[i] = scanner.nextLine();
+        for(int i = 0; i < numbers.length; i++){
+            if(numbers[i] == target){
+                System.out.println("match");
+            }else{
+                System.out.println("no match");
+            }
         }
 
-        for(String food : foods){
-            System.out.print(food + " ");
-        }
-
-        scanner.close();
     }
 }
 
